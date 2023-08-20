@@ -1,1 +1,53 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Summer sale </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;600;700;800&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    
+                    'back-color':' #F9F6E2',
+                    'common-color':' #E527B2',
+                  }
+                }
+              }
+            }
+          </script>
+          <style>
+            .font-work-sans {
+                font-family: 'Work Sans', sans-serif;
+            }
+        </style>
+    </head>
+    <body class="font-work-sans mt-0">
+        <!-- this is the banner section -->
+        <div class="hero min-h-screen bg-back-color">
+            <div class="hero-content w-full flex-col justify-around lg:flex-row-reverse">
+                <div>  <img src="images/Summer 1.png" class="max-w-md max-h-full" /></div>
+              <div >
+                <h3 class="text-3xl font-bold text-center">---SALE FEVER---</h3>
+                <p class="text-6xl font-bold mt-5">Purchase TK 200 or</p>
+                <p class="text-6xl font-bold mt-3">above & get <span class="text-common-color" >20% off</span></p>
+                <div class=" mt-10 text-center space-x-3">
+                    <span class="text-xl font-medium">User Promo code </span>
+                    <button class="btn btn-secondary bg-common-color text-xl font-medium">SELL200</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- this is card section -->
+          <main>
+            
+          </main>
+    </body>
+</html>
