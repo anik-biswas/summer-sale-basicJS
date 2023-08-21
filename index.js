@@ -14,11 +14,15 @@ function handleClickBtn(target)
     const price= target.childNodes[5].innerText.split(' ')[0];
     total=parseInt(total)+parseInt(price);
     document.getElementById("total").innerText=total;
+    if(total>0)
+    {
+        document.getElementById("purchase").disabled=false;
+    }
     if(total>=200)
     {
-        document.getElementById("btn").disabled=false;
+        document.getElementById("apply").disabled=false;
     }
-    grand_total=total-discount;
+    grand_total=total;
     document.getElementById("grand_total").innerText=grand_total;
 
 }
@@ -27,20 +31,24 @@ function handleClickApply()
 
 {
     const result = document.getElementById("input").value;
-    document.getElementById("input").value=null;
-    if(total>=200)
-   {
-    if (coupon.match(result))
+    if (result.length>0)
     {
+        if (coupon.match(result))
+     {
         discount=(total*20)/100;
         grand_total=total-discount;
         document.getElementById("discount").innerText=discount;
         document.getElementById("grand_total").innerText=grand_total;
+     }
+        else
+     {
+        alert("coupon code is wrong");  
+     }
+
     }
     else
     {
-        alert("coupon code is wrong");  
+        alert("Enter the coupon Code");
     }
-   }
-    
+   
 }
