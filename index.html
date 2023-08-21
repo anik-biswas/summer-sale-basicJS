@@ -160,7 +160,7 @@
                           <h2 class="card-title">Have a Coupon!</h2>
                           <div class="flex">
                             <input type="text" id="input" class="w-48 input input-bordered" placeholder="Coupon code">
-                          <button onclick="handleClickApply()" id="btn" class=" btn btn-secondary bg-common-color text-xl font-medium">Apply</button>
+                          <button onclick="handleClickApply()" id="btn" class="  btn btn-secondary bg-common-color text-xl font-medium " disabled>Apply</button>
                           </div>
                         </div>
                       </div>
@@ -171,7 +171,19 @@
                           <p>Total Price : <span id="total">00</span></p>
                           <p>Discount : <span id="discount">00</span></p>
                           <p>Grand Total : <span id="grand_total">00</span></p>
-                          <button class="btn btn-secondary bg-common-color text-xl font-medium">Make Purchase</button>
+                          <!-- <button class="btn btn-secondary bg-common-color text-xl font-medium">Make Purchase</button> -->
+                          
+                            <button class="btn btn-secondary bg-common-color text-xl font-medium" onclick="my_modal_2.showModal()">Make Purchase</button>
+                            <dialog id="my_modal_2" class="modal">
+                            <form method="dialog" class="modal-box">
+                                <img src="images/congo.png" class="px-40 pt-10 h-40" alt="">
+                                <p class="px-28 py-4">Your Purchase the Product </p>
+                                <button class="mx-40 btn btn-secondary bg-common-color text-xl font-medium">Go Home</button>
+                            </form>
+                            <form method="dialog" class="modal-backdrop">
+                                <button>close</button>
+                            </form>
+                            </dialog>
                           </div>
                         </div>
                       </div>
