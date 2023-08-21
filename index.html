@@ -52,42 +52,24 @@
                 <div>
                     <div>
                         <div class="text-4xl font-semibold mb-5">Kitchenware</div>
-                        <div  class=" flex gap-5">
-                            <div class="card w-60 bg-base-100 shadow-xl px-5 py-5">
-                                <figure class="px-10 pt-10 h-40 bg-main-color">
-                                  <img src="images/prod1.png" alt="Shoes" class="" />
-                                </figure>
-                                <div class="card-body items-center text-center">
-                                  <h3 class="card-title text-sm">K. Accessories</h3>
-                                 
-                                  <div class="card-actions">
-                                    <p>40.00</p>
-                                  </div>
-                                </div>
+                          <div  class=" flex gap-5">
+                             <div onclick="handleClickBtn(this)" class="card w-60 bg-base-100 shadow-xl px-5 py-5">
+                                
+                                  <img class="px-10 pt-10 h-40 bg-main-color" src="images/prod1.png" alt=""  />
+                                  <h3 class=" text-sm mt-8 font-semibold items-center text-center">K. Accessories</h3>
+                                  <p class="text-center mt-3">40.00 TK</p>
                               </div>
     
-                              <div class="card w-60 bg-base-100 shadow-xl px-5 py-5">
-                                <figure class="px-10 pt-10 h-40 bg-main-color">
-                                  <img src="images/prod2.png" alt="Shoes" class=" " />
-                                </figure>
-                                <div class="card-body items-center text-center">
-                                  <h3 class="card-title text-sm">K. Accessories</h3>
-                                  <div class="card-actions">
-                                    <p>39.00</p>
-                                  </div>
-                                </div>
+                              <div onclick="handleClickBtn(this)" class="card w-60 bg-base-100 shadow-xl px-5 py-5">
+                                  <img class="px-10 pt-10 h-40 bg-main-color"  src="images/prod2.png" alt=""  />
+                                  <h3 class=" text-sm mt-8 font-semibold items-center text-center">K. Accessories</h3>
+                                  <p class="text-center mt-3">40.00 TK</p>
                               </div>
     
-                              <div class="card w-60 bg-base-100 shadow-xl px-5 py-5">
-                                <figure class="px-10 pt-10 h-40 bg-main-color">
-                                  <img src="images/prod3.png" alt="Shoes" class="" />
-                                </figure>
-                                <div class="card-body items-center text-center">
-                                  <h3 class="card-title  text-sm">Home Cooker</h3>
-                                  <div class="card-actions">
-                                    <p>50.00</p>
-                                  </div>
-                                </div>
+                              <div onclick="handleClickBtn(this)" class="card w-60 bg-base-100 shadow-xl px-5 py-5">
+                                  <img class="px-10 pt-10 h-40 bg-main-color" src="images/prod3.png" alt="" />
+                                  <h3 class=" text-sm mt-8 font-semibold items-center text-center">Home Cooker</h3>
+                                  <p class="text-center mt-3">50.00 TK</p>
                               </div>
                         </div>
                     </div>
@@ -177,12 +159,18 @@
                         <div class="card-body">
                           <h2 class="card-title">Have a Coupon!</h2>
                           <div class="flex">
-                            <input type="text" class="w-48 input input-bordered" placeholder="Coupon code">
-                          <button class="btn btn-secondary bg-common-color text-xl font-medium">Apply</button>
+                            <input type="text" id="input" class="w-48 input input-bordered" placeholder="Coupon code">
+                          <button onclick="handleClickApply()" id="btn" class=" btn btn-secondary bg-common-color text-xl font-medium">Apply</button>
                           </div>
                         </div>
                       </div>
-                      <div class="card w-96 bg-base-100 shadow-xl">
+                      <div class="card w-96 bg-base-100 shadow-xl mt-8 p-8">
+                        <div class="selected-item " id="selected-item">
+
+                        </div>
+                          <p>Total Price : <span id="total">00</span></p>
+                          <p>Discount : <span id="discount">00</span></p>
+                          <p>Grand Total : <span id="grand_total">00</span></p>
                           <button class="btn btn-secondary bg-common-color text-xl font-medium">Make Purchase</button>
                           </div>
                         </div>
@@ -192,5 +180,6 @@
                  </div>
              </div>
           </main>
+          <script src="index.js"></script>
     </body>
 </html>
