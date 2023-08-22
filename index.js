@@ -5,13 +5,13 @@ let coupon='SELL200';
 function handleClickBtn(target)
 {
     const selectedItemContainer= document.getElementById("selected-item")
-    const itemName=target.childNodes[3].innerText;
+    const itemName=target.childNodes[5].innerText;
     
     const li=document.createElement("li");
     li.style.listStyle="decimal inside";
     li.innerText=itemName;
     selectedItemContainer.appendChild(li);
-    const price= target.childNodes[5].innerText.split(' ')[0];
+    const price= target.childNodes[7].innerText.split(' ')[0];
     total=parseInt(total)+parseInt(price);
     document.getElementById("total").innerText=total;
     if(total>0)
