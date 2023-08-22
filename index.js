@@ -39,6 +39,7 @@ function handleClickApply()
         grand_total=total-discount;
         document.getElementById("discount").innerText=discount;
         document.getElementById("grand_total").innerText=grand_total;
+        document.getElementById("input").value=null;
      }
         else
      {
@@ -51,4 +52,10 @@ function handleClickApply()
         alert("Enter the coupon Code");
     }
    
+}
+function handleClick()
+{
+    document.getElementById("total").innerText='00';
+    document.getElementById("grand_total").innerText='00';
+    document.getElementById("discount").innerText='00';
 }
