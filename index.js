@@ -54,8 +54,10 @@ function handleClickApply()
    
 }
 function handleClick()
-{
+ {
     document.getElementById("total").innerText='00';
     document.getElementById("grand_total").innerText='00';
     document.getElementById("discount").innerText='00';
-}
+    document.getElementById("selected-item").innerText=null;
+
+ }
